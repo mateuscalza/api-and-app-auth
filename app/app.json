@@ -1,0 +1,12 @@
+{
+  "name": "WebSecurityAuthExample",
+  "displayName": "WebSecurityAuthExample",
+  "expo": {
+    "name": "WebSecurityAuthExample",
+    "slug": "WebSecurityAuthExample",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
