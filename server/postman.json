@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "1c90bb1f-41ef-47ab-b841-1e85548244e2",
+		"name": "Web security auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Autenticação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"fulano@mail.com\",\n  \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro de post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxNDY5NzMwLWZlMmEtNGY0OS05MmY1LTU5ZThlYTZkM2FmNCIsIm5hbWUiOiJGdWxhbm8iLCJlbWFpbCI6ImZ1bGFub0BtYWlsLmNvbSIsInBlcm1pc3Npb24iOiJhZG1pbiIsImlhdCI6MTYwNjE2NjY3NH0.Gi5DtqUdsIib4R-KzETN7RZUJHR9YZJNS9TMyVEqXFk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Lorem ipsum dolor sit amet\",\n  \"body\": \"Maecenas dignissim quam quis elit luctus, sit amet aliquam libero posuere. Praesent sed lacus et tortor lacinia egestas non a felis. Nam sit amet erat nec quam rhoncus viverra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus tempus mollis nibh, euismod dignissim justo pharetra sed. Vestibulum non viverra est, non tristique neque. Sed egestas, libero non vestibulum consequat, urna nisi lacinia felis, at tristique sapien magna id neque. Praesent pellentesque semper condimentum. In hendrerit fringilla justo. Vivamus ut molestie neque. Praesent vel eros quis urna feugiat mattis et a velit. Nam suscipit ornare facilisis. Etiam non elit ullamcorper nunc interdum dignissim ac a diam. Pellentesque a lectus sit amet mi fringilla congue. Curabitur vestibulum felis ac urna pretium, eget suscipit risus dictum.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista de posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exclusão de post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcxNDY5NzMwLWZlMmEtNGY0OS05MmY1LTU5ZThlYTZkM2FmNCIsIm5hbWUiOiJGdWxhbm8iLCJlbWFpbCI6ImZ1bGFub0BtYWlsLmNvbSIsInBlcm1pc3Npb24iOiJhZG1pbiIsImlhdCI6MTYwNjE2NjY3NH0.Gi5DtqUdsIib4R-KzETN7RZUJHR9YZJNS9TMyVEqXFk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/posts/9563cf47-7a21-4c51-b0c4-6dd851c45f68",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"posts",
+						"9563cf47-7a21-4c51-b0c4-6dd851c45f68"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

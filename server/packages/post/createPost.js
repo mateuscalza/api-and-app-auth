@@ -1,3 +1,4 @@
+const uuid = require('uuid').v4
 const pool = require('../../utils/database')
 
 module.exports = async (request, response) => {
