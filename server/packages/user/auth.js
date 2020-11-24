@@ -17,14 +17,18 @@ module.exports = async (request, response) => {
       return
     }
 
-    const token = jwt.sign({
+    const user = {
       id: existingUser.id,
       name: existingUser.name,
       email: existingUser.email,
       permission: existingUser.permission
-    }, process.env.SECRET)
+    }
+    const token = jwt.sign(user, process.env.SECRET, {
+      expiresIn: '7d'
+    })
 
     response.send({
+      user,
       token,
     })
   } catch (error) {

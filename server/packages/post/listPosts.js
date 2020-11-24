@@ -5,7 +5,7 @@ module.exports = async (request, response) => {
   try {
     client = await pool.connect()
     const result = await client.query(
-      'SELECT id, title, body, created_at FROM "post"',
+      'SELECT id, title, body, created_at FROM "post" ORDER BY created_at DESC',
       []
     )
     const posts = result.rows.map(post => ({
