@@ -4,7 +4,6 @@ import useAuth from './auth'
 
 export default function useApi() {
   const [{ token }] = useAuth()
-  console.log('token', token)
 
   return useMemo(() => axios.create({
     baseURL: 'http://localhost:3000/api/v1/',

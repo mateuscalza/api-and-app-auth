@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { Pressable } from 'react-native'
 import styled from 'styled-components/native'
 import ErrorPresent from '../../components/error'
 import FloatingButton from '../../components/floatingButton'

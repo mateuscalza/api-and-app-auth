@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ActivityIndicator, Modal, KeyboardAvoidingView, SafeAreaView as OriginalSafeAreaView, Platform } from 'react-native';
+import { ActivityIndicator, Modal, KeyboardAvoidingView, SafeAreaView as OriginalSafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
 import useApi from '../../hooks/api';
 import handleError from '../../utils/handleError';
