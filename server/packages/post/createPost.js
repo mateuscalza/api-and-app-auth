@@ -24,7 +24,7 @@ module.exports = async (request, response) => {
     })
   } catch (error) {
     console.error(error)
-    response.status(500).send({ error: { message: error.message } })
+    response.status(500).send({ message: error.message })
   } finally {
     if (client) {
       client.release()

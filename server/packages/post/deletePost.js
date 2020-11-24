@@ -4,19 +4,20 @@ module.exports = async (request, response) => {
   let client
   try {
     client = await pool.connect()
+
+    const id = request.params.id
     const result = await client.query(
-      'SELECT id, title, body, created_at FROM "post"',
-      []
+      'DELETE FROM post WHERE id = $1',
+      [id]
     )
-    const posts = result.rows.map(post => ({
-      id: post.id,
-      title: post.title,
-      body: post.body,
-      createdAt: post.created_at,
-    }))
+
+    if (!result.rowCount) {
+      response.status(404).send({ message: 'Post não encontrado' })
+      return
+    }
 
     response.send({
-      posts,
+      message: "Excluído com sucesso",
     })
   } catch (error) {
     console.error(error)
